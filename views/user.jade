@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    style.
+      table, th, td {
+      border: 1px solid black;
+      }
+  body
+    h3(style='text-align:center') Student Data
+    table(style='width:100%')
+      tr
+        th Name
+        th email
+        each user in data
+      tr
+        td #{user.name}
+        td #{user.email}
+  br    
+  h3(style='text-align:center')
+    | Create Student Data
+    form(action='/create', method='POST', style='text-align')
+      .form-group
+        label(for='name') Name:
+        input.form-control(type='text', placeholder='name', name='name')
+      .form-group
+        label(for='email') Email:
+        input.form-control(type='text', placeholder='email', name='email')
+      button(type='submit') submit
+  br    
+  h3(style='text-align:center')
+    | Update Student Data
+    form(action='/update', method='POST', style='text-align')
+      .form-group
+        label(for='name') Name:
+        input.form-control(type='text', placeholder='name', name='name')
+      .form-group
+        label(for='email') Email:
+        input.form-control(type='text', placeholder='email', name='email')
+      button(type='submit') submit
+  br    
+  h3(style='text-align:center')
+    | Delete Student Data
+    form(action='/delete', method='POST', style='text-align')
+      .form-group
+        label(for='name') Name:
+        input.form-control(type='text', placeholder='name', name='name')
+      .form-group
+        label(for='email') Email:
+        input.form-control(type='text', placeholder='email', name='email')
+      button(type='submit') submit

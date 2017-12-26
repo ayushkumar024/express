@@ -1,0 +1,10 @@
+h3(style='text-align:center')
+  | create Student Data
+  form(action='/create', method='POST', style='text-align')
+    .form-group
+      label(for='frame') First Name:
+      input.form-control(type='text', placeholder='name', name='fname')
+    .form-group
+      label(for='lname') Last Name:
+      input.form-control(type='text', placeholder='name', name='lname')
+    button(type='submit') submit
